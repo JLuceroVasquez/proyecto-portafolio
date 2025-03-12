@@ -1,0 +1,111 @@
+/*Agregamos las fuentes Lora y Poppins en el CSS*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Reseteamos el margen y padding de todos los elementos html*/
+*{
+    padding:0;
+    margin:0;
+}
+/* Estilo del cuerpo de la página*/
+body {
+    background-color: #f2f2f2;
+    color: #005c62;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/*Estilo del texto dentro de etiquetas strong*/
+.tituloNivel1__destacado {
+    color: #3568BF;
+}
+
+/*Estilo del encabezado*/
+.encabezado{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:2%;
+}
+
+/*Estilo del contenido (main)*/
+.contenido{
+    display:flex;
+    align-items: center;
+    margin:5%; /*Para agregar un margen a todo el contenedor del 5% respecto a los límites de la pantalla*/
+    justify-content: space-between; /*Para añadir espacio entre los items del contenedor, si aún queda espacio libre*/
+}
+
+    /*Estilo de la sección "presentacion" del contenido (main)*/
+    .contenido__presentacion{
+        width:615px;
+        display:flex; /*Convertimos la sección contenido__presentación en un contenedor flexible*/
+        flex-direction: column; /*Establecemos como eje principal al eje vertical*/
+        gap: 40px;
+    }
+
+        /*Estilo del titulo de la sección h1 "presentación"*/
+        .contenido__presentacion__titulo{
+            font-size:36px;
+            line-height: 1.5;
+            font-family: 'Lora', Georgia, serif;
+            font-weight: 700;
+        }
+
+        /*Estilo del titulo de la sección texto "presentación"*/
+        .contenido__presentacion__texto{
+            font-size:24px;
+            line-height: 1.5;
+            font-family: 'Lora', Georgia, serif;
+            font-weight: 400;
+        }
+       
+        /*Estilo de los enlaces de la sección texto "presentación"*/
+        .contenido__presentacion__redSocial{
+            display:flex;
+            justify-content:space-between;
+        }
+
+            /* Estilo por defecto de los enlaces */
+            .contenido__presentacion__redSocial__item {
+                /*Tamaño, fuente y negrita de la letra*/
+                font-size:24px;
+                font-family: 'Poppins', Helvetica, sans-serif;
+                font-weight: 600;
+                /*Decoración y posición de la letra*/
+                color: #3DEFCA;
+                text-decoration: none;
+                text-align: center;
+                /*Color, tamaño y esquinas de la cajita*/
+                background-color: #3568BF;
+                width:280px;
+                padding: 21.5px 0;
+                border-radius: 16px;
+            }
+
+            /* Estilo cuando visité los enlaces */
+            a:visited { /* visited es una pseudoclase especial que no se puede reemplazar con una clase BEM (--visited) debido a restricciones de seguridad*/
+                color: violet;
+            }
+
+            /* Estilo cuando paso el cursor sobre los enlaces */
+            .contenido__presentacion__redSocial__item--hover{
+                text-decoration: underline;
+            }
+
+            /* Estilo cuando mantengo presionado el click sobre los enlaces */
+            .contenido__presentacion__redSocial__item--active{
+                color: #3DEFCA;
+            }
+
+/*Estilo del pie de pagina*/
+.pieDePagina{
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    margin:2%;
+    font-size:24px;
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 600;
+}
+
+
