@@ -1,5 +1,5 @@
 /*Agregamos las fuentes Lora y Poppins en el CSS*/
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*Reseteamos el margen y padding de todos los elementos html*/
 *{
@@ -46,24 +46,34 @@ body {
         /*Estilo del titulo de la sección h1 "presentación"*/
         .contenido__presentacion__titulo{
             font-size:36px;
-            line-height: 1.5;
-            font-family: 'Lora', Georgia, serif;
-            font-weight: 700;
+            font-family: 'Krona One', Verdana, sans-serif;
+            font-weight: 400;
         }
 
         /*Estilo del titulo de la sección texto "presentación"*/
         .contenido__presentacion__texto{
             font-size:24px;
             line-height: 1.5;
-            font-family: 'Lora', Georgia, serif;
+            font-family: 'Poppins', Helvetica, sans-serif;
             font-weight: 400;
         }
        
         /*Estilo de los enlaces de la sección texto "presentación"*/
         .contenido__presentacion__redSocial{
             display:flex;
-            justify-content:space-between;
+            flex-direction:column;
+            align-items: center;
+            gap:32px;
         }
+            /* Estilo del título del contenedor "Red Social"*/
+            .contenido__presentacion__redSocial__titulo{
+                /*Tipo de la fuente*/
+                font-family: 'Krona One', Verdana, sans-serif;
+                /*Tamaño de la fuente*/
+                font-size:24px;
+                /*Peso de la fuente*/
+                font-weight: 400;
+            }
 
             /* Estilo por defecto de los enlaces */
             .contenido__presentacion__redSocial__item {
@@ -72,14 +82,14 @@ body {
                 font-family: 'Poppins', Helvetica, sans-serif;
                 font-weight: 600;
                 /*Decoración y posición de la letra*/
-                color: #3DEFCA;
+                color: #3568BF;
                 text-decoration: none;
                 text-align: center;
-                /*Color, tamaño y esquinas de la cajita*/
-                background-color: #3568BF;
-                width:280px;
+                /*Borde, tamaño y esquinas de la cajita*/
+                border: 2px solid #3568BF;
+                width:378px;
                 padding: 21.5px 0;
-                border-radius: 16px;
+                border-radius: 8px;
             }
 
             /* Estilo cuando visité los enlaces */
@@ -104,8 +114,8 @@ body {
     justify-content:space-evenly;
     margin:2%;
     font-size:24px;
-    font-family: 'Lora', Georgia, serif;
-    font-weight: 600;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-weight: 400;
 }
 
 
