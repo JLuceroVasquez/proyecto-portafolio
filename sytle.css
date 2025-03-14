@@ -90,6 +90,11 @@ body {
                 width:378px;
                 padding: 21.5px 0;
                 border-radius: 8px;
+                /*Posicionamiento de elementos con flex-box*/
+                display: flex;
+                justify-content: center;
+                align-items: center; /*para evitar que la altura de los íconos de amplie hasta alcanzar la altura del content (36px) y se mantenga en 32px*/
+                gap:16px;
             }
 
             /* Estilo cuando visité los enlaces */
@@ -99,7 +104,9 @@ body {
 
             /* Estilo cuando paso el cursor sobre los enlaces */
             .contenido__presentacion__redSocial__item--hover{
-                text-decoration: underline;
+                cursor:pointer;
+                background-color: #ffffff;
+                padding: 3%;
             }
 
             /* Estilo cuando mantengo presionado el click sobre los enlaces */
