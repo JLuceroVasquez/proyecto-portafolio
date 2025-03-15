@@ -10,8 +10,11 @@
 body {
     background-color: #f2f2f2;
     color: #005c62;
-    height: 100vh;
     box-sizing: border-box;
+    display: flex; /*Se convirtió a body en un contenedor flexible para evitar el colapso de márgenes entre sus elementos hijos (header, main y footer)*/
+    flex-direction: column; /*Se alineó los elementos verticalmente*/
+    /* Inicialmente, se añadió esta propiedad para que los elementos del body ocupen el 100% de la altura de la ventana del navegador. Sin embargo, luego se quitó para evitar que el footer no se sobreponga a otros elementos del body y ocupe correctamente la parte inferior de la pantalla del navegador.
+    height: 100vh;*/
 }
 
 /*Estilo del texto dentro de etiquetas strong*/
@@ -21,17 +24,47 @@ body {
 
 /*Estilo del encabezado*/
 .encabezado{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:2%;
+    /*Agregamos margen y padding al contenedor*/
+    padding: 61px 57.625px;
 }
+
+    /*Estilo del menú*/
+    .encabezado__menu{
+        /*Acomodamos los elementos con display-flex*/
+        display:flex;
+        align-items:center;
+        justify-content:flex-start;
+        gap: 80px;
+    }
+        
+        /*Estilo de los enlaces*/
+        .encabezado__menu__item{
+            /*Color de la letra*/    
+            color: #3568BF;
+            /*Tamaño, familia tipográfica y peso del texto*/
+            font-size:24px;
+            font-family: 'Poppins', Helvetica, sans-serif;
+            font-weight: 600;
+        }
+            
+            /*Estilo de los enlaces del menu cuando se pasa el cursos encima*/
+            .encabezado__menu__item--hover{
+                cursor:pointer;
+                color: #3DEFCA;
+            }
+
+            /*Estilo de los enlaces del menu cuando se hace click encima*/
+            .encabezado__menu__item--active{
+                color: #3DEFCA;
+            }
+
 
 /*Estilo del contenido (main)*/
 .contenido{
     display:flex;
     align-items: center;
     margin:5%; /*Para agregar un margen a todo el contenedor del 5% respecto a los límites de la pantalla*/
+    overflow: hidden;
     justify-content: space-between; /*Para añadir espacio entre los items del contenedor, si aún queda espacio libre*/
 }
 
@@ -96,33 +129,41 @@ body {
                 align-items: center; /*para evitar que la altura de los íconos de amplie hasta alcanzar la altura del content (36px) y se mantenga en 32px*/
                 gap:16px;
             }
+                /* Estilo cuando paso el cursor sobre los enlaces */
+                .contenido__presentacion__redSocial__item--hover{
+                    cursor:pointer;
+                    background-color: #ffffff;
+                    padding: 3%;
+                }
 
-            /* Estilo cuando visité los enlaces */
-            a:visited { /* visited es una pseudoclase especial que no se puede reemplazar con una clase BEM (--visited) debido a restricciones de seguridad*/
-                color: violet;
-            }
-
-            /* Estilo cuando paso el cursor sobre los enlaces */
-            .contenido__presentacion__redSocial__item--hover{
-                cursor:pointer;
-                background-color: #ffffff;
-                padding: 3%;
-            }
-
-            /* Estilo cuando mantengo presionado el click sobre los enlaces */
-            .contenido__presentacion__redSocial__item--active{
-                color: #3DEFCA;
-            }
+                /* Estilo cuando mantengo presionado el click sobre los enlaces */
+                .contenido__presentacion__redSocial__item--active{
+                    color: #3DEFCA;
+                }
 
 /*Estilo del pie de pagina*/
 .pieDePagina{
-    display:flex;
-    align-items:center;
-    justify-content:space-evenly;
-    margin:2%;
+    /*Color de fondo y la letra*/    
+    background-color: #3568BF;
+    color: #f5f5f5;
+    /*Tamaño, familia tipográfica y peso del texto*/
     font-size:24px;
     font-family: 'Poppins', Helvetica, sans-serif;
     font-weight: 400;
+    /*Ubicación de los elementos con display flex*/
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap: 24px;
+    /*Espaciado del Padding*/
+    padding: 24px;
+    margin: 37px 0 0 0; /* Arriba | Derecha | Abajo | Izquierda. Se agregó 37px de margen (considerando el espacio de 24px del padding) para crear un espacio de 61px entre el contenido de main y footer*/
+    overflow: hidden;
+}
+
+/* Estilo cuando visité los enlaces */
+a:visited { /* visited es una pseudoclase especial que no se puede reemplazar con una clase BEM (--visited) debido a restricciones de seguridad*/
+    color: violet;
 }
 
 
