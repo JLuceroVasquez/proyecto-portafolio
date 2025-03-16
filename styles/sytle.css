@@ -25,7 +25,7 @@ body {
 /*Estilo del encabezado*/
 .encabezado{
     /*Agregamos margen y padding al contenedor*/
-    padding: 61px 57.625px;
+    padding: 2% 0 0 15%; /* Arriba | Derecha | Abajo | Izquierda*/
 }
 
     /*Estilo del menú*/
@@ -45,6 +45,8 @@ body {
             font-size:24px;
             font-family: 'Poppins', Helvetica, sans-serif;
             font-weight: 600;
+            /*Decoración del texto*/
+            text-decoration: none;
         }
             
             /*Estilo de los enlaces del menu cuando se pasa el cursos encima*/
@@ -63,7 +65,7 @@ body {
 .contenido{
     display:flex;
     align-items: center;
-    margin:5%; /*Para agregar un margen a todo el contenedor del 5% respecto a los límites de la pantalla*/
+    padding:5% 15%; /*Para agregar un relleno a todo el contenido del 5% respecto al borde*/
     overflow: hidden;
     justify-content: space-between; /*Para añadir espacio entre los items del contenedor, si aún queda espacio libre*/
 }
@@ -90,7 +92,39 @@ body {
             font-family: 'Poppins', Helvetica, sans-serif;
             font-weight: 400;
         }
-       
+
+        /*Estilo de los elementos de una lista*/
+        .contenido__presentacion__lista{
+            font-size:24px;
+            line-height: 1.5;
+            font-family: 'Poppins', Helvetica, sans-serif;
+            font-weight: 400;
+            padding: 0 0 0 6.5%; /* Arriba | Derecha | Abajo | Izquierda*/
+        }
+
+            /*Estilo de los enlaces en los elementos de una lista*/
+            .contenido__presentacion__lista__item{
+                /*Color de la letra*/    
+                color: #3568BF;
+                /*Tamaño, familia tipográfica y peso del texto*/
+                font-size:24px;
+                font-family: 'Poppins', Helvetica, sans-serif;
+                font-weight: 600;
+                /*Decoración del texto*/
+                text-decoration: none;
+            }
+
+                /*Estilo de los enlaces del menu cuando se pasa el cursos encima*/
+                .contenido__presentacion__lista__item--hover{
+                    cursor:pointer;
+                    color: #3DEFCA;
+                }
+
+                /*Estilo de los enlaces del menu cuando se hace click encima*/
+                .contenido__presentacion__lista__item--active{
+                    color: #3DEFCA;
+                }
+
         /*Estilo de los enlaces de la sección texto "presentación"*/
         .contenido__presentacion__redSocial{
             display:flex;
@@ -157,7 +191,6 @@ body {
     gap: 24px;
     /*Espaciado del Padding*/
     padding: 24px;
-    margin: 37px 0 0 0; /* Arriba | Derecha | Abajo | Izquierda. Se agregó 37px de margen (considerando el espacio de 24px del padding) para crear un espacio de 61px entre el contenido de main y footer*/
     overflow: hidden;
 }
 
