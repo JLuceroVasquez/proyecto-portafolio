@@ -29,11 +29,6 @@ body {
     height: 100vh;*/
 }
 
-/*Estilo del texto dentro de etiquetas strong*/
-.tituloNivel1__destacado {
-    color: var(--color-terciario);
-}
-
 /*Estilo del encabezado*/
 .encabezado{
     /*Agregamos margen y padding al contenedor*/
@@ -77,14 +72,15 @@ body {
 .contenido{
     display:flex;
     align-items: center;
-    padding:5% 5%; /*Para agregar un relleno a todo el contenido del 5% respecto al borde*/
+    padding:5% 15%; /*Para agregar un relleno a todo el contenido del 5% vertical y 15% horizontal del tamaño del body/
     overflow: hidden;
     justify-content: space-between; /*Para añadir espacio entre los items del contenedor, si aún queda espacio libre*/
+    gap: 82px; /*Añadimos un espacio entre los elementos del main: texto + enlaces e imagen*/
 }
 
     /*Estilo de la sección "presentacion" del contenido (main)*/
     .contenido__presentacion{
-        width:615px;
+        width:50%; /*Para asegurar que el texto + links ocupen 50% de la pantalla*/
         display:flex; /*Convertimos la sección contenido__presentación en un contenedor flexible*/
         flex-direction: column; /*Establecemos como eje principal al eje vertical*/
         gap: 40px;
@@ -96,6 +92,11 @@ body {
             font-family: var(--fuente-titulo);
             font-weight: 400;
         }
+
+            /*Estilo del texto dentro de etiquetas strong*/
+            .tituloNivel1__destacado {
+                color: var(--color-terciario);
+            }
 
         /*Estilo del titulo de la sección texto "presentación"*/
         .contenido__presentacion__texto{
@@ -166,7 +167,7 @@ body {
                 text-align: center;
                 /*Borde, tamaño y esquinas de la cajita*/
                 border: 2px solid var(--color-terciario);
-                width:500px;
+                width:63.74%; /*Para guardar la proporción entre el tamaño de los enlaces y la sección del texto presentación*/
                 padding: 21.5px 0;
                 border-radius: 8px;
                 /*Posicionamiento de elementos con flex-box*/
@@ -187,6 +188,10 @@ body {
                     color: var(--color-enlace-clickeado);
                 }
 
+    /*Estilo de las imagenes de la sección main del body*/
+    .contenido__imagen {
+        width: 50%; /*Para asegurar que la imagen ocupe 50% de la pantalla*/
+    }
 /*Estilo del pie de pagina*/
 .pieDePagina{
     /*Color de fondo y la letra*/    
