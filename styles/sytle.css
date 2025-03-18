@@ -216,4 +216,26 @@ a:visited { /* visited es una pseudoclase especial que no se puede reemplazar co
     color: var(--color-enlace-visitado);
 }
 
+/*Empleamos las consultas de medios para dar un estilo a pantallas con un ancho inferior a 1200px*/
+@media (max-width:1200px){
+    .encabezado{
+        padding:10%; /*Homogenizamos el padding en todos los lados*/
+    }
+    
+    .encabezado__menu{
+        justify-content: center; /*Centramos el texto del menú*/
+    }
 
+    .contenido{
+        flex-direction: column-reverse; /*Se organizan los elementos en columnas*/
+        padding:5%; /*Disminuimos el padding porque el texto e imagen están organizados en una columna y no compiten por espacio*/
+    }
+
+    .contenido__presentacion{
+        width:93.83%; /*Ajustamos el tamaño de la sección presentación para que ocupe más espacio en pantalla*/
+    }
+
+    .contenido__imagen {
+        width:68.78%; /*Ajustamos el tamaño de la imagen para que ocupe más espacio en pantalla*/
+    }
+}
